@@ -23,6 +23,7 @@ public class WorldGenCustomOres implements IWorldGenerator
 	private WorldGenerator nether_gold_ore;
 	private WorldGenerator infested_netherrack;
 	private WorldGenerator mineral_sand;
+	private WorldGenerator basalt;
 	
 	public WorldGenCustomOres()
 	{
@@ -34,6 +35,7 @@ public class WorldGenCustomOres implements IWorldGenerator
 		nether_gold_ore = new WorldGenMinable(BlocksInit.nether_gold_ore.getDefaultState(), 12, BlockMatcher.forBlock(Blocks.NETHERRACK));
 		infested_netherrack = new WorldGenMinable(BlocksInit.infested_netherrack.getDefaultState(), 5, BlockMatcher.forBlock(Blocks.NETHERRACK));
 		mineral_sand = new WorldGenMinable(BlocksInit.mineral_sand.getDefaultState(), 8, BlockMatcher.forBlock(Blocks.SAND));
+		basalt = new WorldGenMinable(BlocksInit.basalt.getDefaultState(), 22, BlockMatcher.forBlock(Blocks.STONE));
 	}
 	
 	@Override
@@ -47,6 +49,7 @@ public class WorldGenCustomOres implements IWorldGenerator
 		if(world.provider.getDimension() == -1) runGenerator(nether_gold_ore, world, random, chunkX, chunkZ, 6F, 0, 128);
 		if(world.provider.getDimension() == -1) runGenerator(infested_netherrack, world, random, chunkX, chunkZ, 16F, 32, 128);
 		if(world.provider.getDimension() == 0) runGenerator(mineral_sand, world, random, chunkX, chunkZ, 12F, 40, 70);
+		if(world.provider.getDimension() == 0) runGenerator(basalt, world, random, chunkX, chunkZ, 30.0F, 0, 16);
 	}
 	
 	private void runGenerator(WorldGenerator gen, World world, Random rand, int chunkX, int chunkZ, float chance, int minHeight, int maxHeight)

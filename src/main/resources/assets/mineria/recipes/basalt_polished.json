@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+    "###",
+    "###"
+    ],
+    "key": {
+    "#": {
+        "item": "mineria:basalt"
+    }
+    },
+    "result": {
+    "item": "mineria:basalt_polished",
+    "count": 4
+    }
+}

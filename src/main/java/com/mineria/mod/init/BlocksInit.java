@@ -43,6 +43,7 @@ public class BlocksInit {
 	public static Block lonsdaleite_ore;
 	public static Block nether_gold_ore;
 	public static Block silver_ore;
+	public static Block basalt;
 	
 	//OreBlocks
 	public static Block lead_block;
@@ -87,6 +88,7 @@ public class BlocksInit {
 	public static Block xp_wall;
 	public static Block water_barrel;
 	public static Block infinite_water_barrel;
+	public static Block basalt_polished;
 	
 	public static void init()
 	{
@@ -98,6 +100,7 @@ public class BlocksInit {
 		lonsdaleite_ore = register(new OreBase("lonsdaleite_ore", 3, Material.ROCK, 6F, 10F, SoundType.STONE, 1, 2));
 		nether_gold_ore = register(new OreBase("nether_gold_ore", 2, Material.ROCK, 1.75F, 1F, SoundType.STONE));
 		silver_ore = register(new OreBase("silver_ore", 2, Material.ROCK, 3F, 5F, SoundType.STONE));
+		basalt = register(new OreBase("basalt", 1, Material.ROCK, 3F, 5F, SoundType.STONE));
 		
 		//OreBlocks
 		lead_block = register(new OreBlockBase("lead_block", 2, Material.IRON, 6.5F, 20F, SoundType.METAL));
@@ -142,6 +145,7 @@ public class BlocksInit {
 		xp_wall = register(new BlockBase("xp_wall", 1, Material.IRON, 2.5F, 5F, SoundType.METAL));
 		water_barrel = register(new BlockBarrel("water_barrel", 8));
 		infinite_water_barrel = register(new BlockBarrel("infinite_water_barrel", -1));
+		basalt_polished = register(new OreBase("basalt_polished", 1, Material.ROCK, 3F, 5F, SoundType.STONE));		
 	}
 
 	private static Block register(Block instance)
